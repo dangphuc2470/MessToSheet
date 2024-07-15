@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MyHomeScreen extends StatefulWidget {
   const MyHomeScreen({super.key});
@@ -77,33 +78,33 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    width: 20,
-                    margin: EdgeInsets.only(left: 5, right: 10),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.add_circle_rounded, color: blue),
-                    ),
-                  ),
-                  Container(
-                    width: 20,
-                    margin: EdgeInsets.only(left: 5, right: 10),
                     child: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.camera_alt_rounded, color: blue)),
+                        icon: SvgPicture.asset(
+                          'assets/more_send.svg', fit: BoxFit.fill,
+                        )),
+
                   ),
                   Container(
-                    width: 20,
-                    margin: EdgeInsets.only(left: 5, right: 10),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: SvgPicture.asset(
+                          'assets/camera.svg', fit: BoxFit.fill,
+                        ),
+                      )),
+                  Container(
                     child: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.photo_rounded, color: blue)),
+                        icon: SvgPicture.asset(
+                          'assets/picture.svg', fit: BoxFit.fill,
+                        )),
                   ),
                   Container(
-                    width: 20,
-                    margin: EdgeInsets.only(left: 5, right: 20),
                     child: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.mic_rounded, color: blue)),
+                        icon: SvgPicture.asset(
+                          'assets/voice.svg', fit: BoxFit.fill,
+                        )),
                   ),
                   Expanded(
                     child: Stack(
@@ -111,7 +112,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                         Container(
                           alignment: Alignment.center,
                           height: 40,
-                          padding: EdgeInsets.only(left: 20, bottom:4),
+                          padding: EdgeInsets.only(left: 20, bottom: 4),
                           decoration: BoxDecoration(
                             color: secondaryContainer, // background color
                             borderRadius:
@@ -132,8 +133,9 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                           top: 0,
                           child: IconButton(
                               onPressed: () {},
-                              icon: Icon(Icons.emoji_emotions_rounded,
-                                  color: blue)),
+                              icon: SvgPicture.asset(
+                                'assets/emoji.svg',
+                              )),
                         ),
                       ],
                     ),
@@ -141,7 +143,9 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                   IconButton(
                       onPressed: () {},
                       icon: _focusNode.hasFocus
-                          ? Icon(Icons.send_rounded, color: blue)
+                          ? SvgPicture.asset(
+                        'assets/like.svg',
+                      )
                           : Icon(Icons.send_rounded, color: blue)),
                 ],
               ),

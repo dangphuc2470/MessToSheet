@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import 'MyHomeScreen.dart';
 
 void main() {
@@ -85,13 +85,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Spacer(),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.call_rounded, color: firstColor)),
+                    icon: SvgPicture.asset('assets/call.svg', color: firstColor,),),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.video_call_rounded, color: firstColor)),
+                  icon: SvgPicture.asset('assets/video.svg', color: firstColor,),),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.info_rounded, color: firstColor)),
+                  icon: SvgPicture.asset('assets/info.svg', color: firstColor,),),
               ],
             ),
           ),
